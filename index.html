@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Choubey | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <!-- Hero / About Section -->
+        <section id="about" class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Welcome to my portfolio</span>
+                <h1 id="title">Hi, I'm <span class="highlight">Vivek Choubey</span></h1>
+                <p class="subtitle">Aspiring Software Developer &amp; Tech Enthusiast</p>
+                <p class="bio">
+                    Passionate about building responsive, user-friendly web applications and mastering modern development tools like Git, GitHub, and full-stack technologies.
+                </p>
+                <div class="hero-actions">
+                    <button id="greet-btn" class="btn btn-primary">Say Hello 👋</button>
+                    <button id="theme-btn" class="btn btn-secondary">Switch Theme 🌙</button>
+                </div>
+                <div id="greeting-box" class="greeting-box hidden"></div>
+            </div>
+            <div class="hero-card">
+                <div class="profile-avatar">VC</div>
+                <div class="profile-info">
+                    <p><strong>Name:</strong> Vivek Choubey</p>
+                    <p><strong>Role:</strong> Student &amp; Web Developer</p>
+                    <p><strong>Status:</strong> Open to Opportunities</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Technical Skills</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup &amp; accessible web standards</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, animations &amp; responsive design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, ES6+ syntax &amp; interactive UIs</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐙</div>
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Version control, branch workflows &amp; collaboration</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Core programming, algorithms &amp; problem solving</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first layouts adaptable to any screen</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A showcase of some of my recent work</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Web Development</span>
+                    </div>
+                    <h3>Personal Portfolio</h3>
+                    <p>Modern and responsive personal portfolio showcasing skills, projects, and contact info built using HTML, CSS, and JavaScript.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Web App</span>
+                    </div>
+                    <h3>Weather Forecast App</h3>
+                    <p>Interactive weather dashboard providing real-time weather updates, temperature, and forecasts using OpenWeather API.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>REST API</span>
+                        <span>CSS Grid</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Productivity</span>
+                    </div>
+                    <h3>Task Master To-Do App</h3>
+                    <p>Feature-rich task management tool with local storage persistence, category filtering, and task completion metrics.</p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>LocalStorage</span>
+                        <span>Flexbox</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Feel free to connect or drop a message</p>
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your Email</label>
+                        <input type="email" id="contact-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" rows="4" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="form-feedback" class="form-feedback"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
