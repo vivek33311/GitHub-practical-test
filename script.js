@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (formFeedback) {
                 formFeedback.textContent = `Thanks, ${name}! Your message has been sent successfully.`;
-                formFeedback.style.color = '#38bdf8';
+                formFeedback.style.color = 'var(--text-primary)';
             }
 
             contactForm.reset();
