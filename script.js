@@ -1,73 +1,47 @@
-// ==========================================================
-// Portfolio Interactive Scripts
-// ==========================================================
-
+// Minimalist Interactive JavaScript
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Theme Toggle Functionality
+    // 1. Theme Toggle (Black / White)
     const themeBtn = document.getElementById('theme-btn');
     const body = document.body;
 
-    // Check saved theme or system preference
-    const savedTheme = localStorage.getItem('portfolio-theme');
+    const savedTheme = localStorage.getItem('site-theme');
     if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-        if (themeBtn) themeBtn.textContent = 'Switch Theme ☀️';
+        body.classList.add('light');
     }
 
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            const isLight = body.classList.contains('light-theme');
-            themeBtn.textContent = isLight ? 'Switch Theme ☀️' : 'Switch Theme 🌙';
-            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            body.classList.toggle('light');
+            const isLight = body.classList.contains('light');
+            localStorage.setItem('site-theme', isLight ? 'light' : 'dark');
         });
     }
 
-    // 2. Interactive Greeting Button
+    // 2. Greeting Interaction
     const greetBtn = document.getElementById('greet-btn');
-    const greetingBox = document.getElementById('greeting-box');
+    const greetingText = document.getElementById('greeting-text');
 
-    if (greetBtn && greetingBox) {
+    if (greetBtn && greetingText) {
         greetBtn.addEventListener('click', () => {
-            const currentHour = new Date().getHours();
-            let greetingTime = 'Hello';
-
-            if (currentHour < 12) {
-                greetingTime = 'Good Morning';
-            } else if (currentHour < 18) {
-                greetingTime = 'Good Afternoon';
-            } else {
-                greetingTime = 'Good Evening';
-            }
-
-            greetingBox.innerHTML = `
-                <strong>${greetingTime}! 👋</strong> Thank you for visiting Vivek Choubey's portfolio. 
-                Feel free to explore my skills, projects, and connect with me below!
-            `;
-            greetingBox.classList.remove('hidden');
+            const hour = new Date().getHours();
+            const timeGreeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+            greetingText.textContent = `${timeGreeting}! Thanks for stopping by Vivek Choubey's portfolio.`;
         });
     }
 
-    // 3. Contact Form Submission Handling
+    // 3. Contact Form Submission
     const contactForm = document.getElementById('contact-form');
-    const formFeedback = document.getElementById('form-feedback');
+    const formStatus = document.getElementById('form-status');
 
-    if (contactForm) {
+    if (contactForm && formStatus) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const nameInput = document.getElementById('contact-name');
-            const name = nameInput ? nameInput.value.trim() : 'Friend';
-
-            if (formFeedback) {
-                formFeedback.textContent = `Thanks, ${name}! Your message has been sent successfully.`;
-                formFeedback.style.color = 'var(--text-primary)';
-            }
-
+            const name = document.getElementById('name').value.trim();
+            formStatus.textContent = `Thank you, ${name}. Message received.`;
             contactForm.reset();
-
             setTimeout(() => {
-                if (formFeedback) formFeedback.textContent = '';
-            }, 5000);
+                formStatus.textContent = '';
+            }, 4000);
         });
     }
 });

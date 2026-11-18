@@ -3,188 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivek Choubey | Portfolio</title>
+    <title>Vivek Choubey — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <header class="header">
-        <nav class="navbar">
-            <a href="#" class="nav-logo">Vivek<span>.dev</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="nav">
+            <a href="#" class="logo">Vivek Choubey</a>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme">◐</button>
+            </div>
         </nav>
     </header>
 
-    <main class="container">
-        <!-- Hero / About Section -->
-        <section id="about" class="hero-section">
-            <div class="hero-content">
-                <span class="badge">Welcome to my portfolio</span>
-                <h1 id="title">Hi, I'm <span class="highlight">Vivek Choubey</span></h1>
-                <p class="subtitle">Aspiring Software Developer &amp; Tech Enthusiast</p>
-                <p class="bio">
-                    Passionate about building responsive, user-friendly web applications and mastering modern development tools like Git, GitHub, and full-stack technologies.
-                </p>
-                <div class="hero-actions">
-                    <button id="greet-btn" class="btn btn-primary">Say Hello 👋</button>
-                    <button id="theme-btn" class="btn btn-secondary">Switch Theme 🌙</button>
-                </div>
-                <div id="greeting-box" class="greeting-box hidden"></div>
+    <main class="wrapper">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <p class="eyebrow">Portfolio</p>
+            <h1>Vivek Choubey</h1>
+            <p class="lead">Web developer and student focused on building clean, accessible web interfaces and learning modern software technologies.</p>
+            <div class="quick-meta">
+                <span>Location: India</span>
+                <span>Focus: Front-End &amp; Git Workflow</span>
+                <span>Status: Available for projects</span>
             </div>
-            <div class="hero-card">
-                <div class="profile-avatar">VC</div>
-                <div class="profile-info">
-                    <p><strong>Name:</strong> Vivek Choubey</p>
-                    <p><strong>Role:</strong> Student &amp; Web Developer</p>
-                    <p><strong>Status:</strong> Open to Opportunities</p>
-                </div>
-            </div>
+            <button id="greet-btn" class="btn">Say Hello</button>
+            <p id="greeting-text" class="greeting-text"></p>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <h2 class="section-title">My Technical Skills</h2>
-            <p class="section-subtitle">Technologies and tools I work with</p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>HTML5</h3>
-                    <p>Semantic markup &amp; accessible web standards</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>CSS3</h3>
-                    <p>Flexbox, Grid, animations &amp; responsive design</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>JavaScript</h3>
-                    <p>DOM manipulation, ES6+ syntax &amp; interactive UIs</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🐙</div>
-                    <h3>Git &amp; GitHub</h3>
-                    <p>Version control, branch workflows &amp; collaboration</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🐍</div>
-                    <h3>Python</h3>
-                    <p>Core programming, algorithms &amp; problem solving</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Responsive Design</h3>
-                    <p>Mobile-first layouts adaptable to any screen</p>
-                </div>
-            </div>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Git &amp; GitHub</li>
+                <li>Python</li>
+                <li>Responsive Design</li>
+            </ul>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">A showcase of some of my recent work</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-tag">Web Development</span>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <article class="project-item">
+                    <div class="project-meta">
+                        <h3>Personal Portfolio</h3>
+                        <span class="year">2026</span>
                     </div>
-                    <h3>Personal Portfolio</h3>
-                    <p>Modern and responsive personal portfolio showcasing skills, projects, and contact info built using HTML, CSS, and JavaScript.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
+                    <p>Minimalist single-page responsive portfolio built with semantic HTML, modern CSS, and vanilla JavaScript.</p>
+                    <p class="tech-stack">HTML / CSS / JavaScript / Git</p>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-tag">Web App</span>
+                <article class="project-item">
+                    <div class="project-meta">
+                        <h3>Weather Application</h3>
+                        <span class="year">2026</span>
                     </div>
-                    <h3>Weather Forecast App</h3>
-                    <p>Interactive weather dashboard providing real-time weather updates, temperature, and forecasts using OpenWeather API.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>REST API</span>
-                        <span>CSS Grid</span>
-                    </div>
-                </div>
+                    <p>Clean dashboard fetching real-time weather and forecast data from a REST API.</p>
+                    <p class="tech-stack">JavaScript / REST API / CSS</p>
+                </article>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="project-tag">Productivity</span>
+                <article class="project-item">
+                    <div class="project-meta">
+                        <h3>Task Tracker</h3>
+                        <span class="year">2026</span>
                     </div>
-                    <h3>Task Master To-Do App</h3>
-                    <p>Feature-rich task management tool with local storage persistence, category filtering, and task completion metrics.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>LocalStorage</span>
-                        <span>Flexbox</span>
-                    </div>
-                </div>
+                    <p>Lightweight task management application with local storage persistence and status filters.</p>
+                    <p class="tech-stack">JavaScript / LocalStorage</p>
+                </article>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">Feel free to connect or drop a message</p>
-            <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="contact-name">Your Name</label>
-                        <input type="text" id="contact-name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email">Your Email</label>
-                        <input type="email" id="contact-email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea id="contact-message" rows="4" placeholder="Write your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <p id="form-feedback" class="form-feedback"></p>
-                </form>
-            </div>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p class="contact-desc">Have a question or want to work together? Send a message.</p>
+            <form id="contact-form" class="simple-form">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Your name">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="3" required placeholder="Write a short message..."></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>Vivek Choubey</h3>
-                <p>Passionate Developer &amp; Student | Building modern web solutions.</p>
-            </div>
+        <div class="footer-inner">
+            <p>&copy; 2026 Vivek Choubey. All rights reserved.</p>
             <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <a href="https://github.com/vivek33311" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#about">Back to top ↑</a>
             </div>
-            <div class="footer-social">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <a href="https://github.com/vivek33311" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Vivek Choubey. All rights reserved. Created for Git and GitHub Practical Test.</p>
         </div>
     </footer>
 
